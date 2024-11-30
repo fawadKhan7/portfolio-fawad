@@ -2,7 +2,7 @@ import PrimeTution from "@/assets/projects/prime.png";
 import Coursehub from "@/assets/projects/coursehub.png";
 import Croom from "@/assets/projects/croom.svg";
 import Softlogic from "@/assets/projects/softlogic.png";
-import Swiftshop from "@/assets/projects/swiftshop.png";
+import Swiftshop from "@/assets/projects/swiftshop.png"; 
 import Taskmate from "@/assets/projects/taskmate.png";
 import Streamify from "@/assets/projects/Streamify.png";
 import Coach from "@/assets/projects/Coach.png";
