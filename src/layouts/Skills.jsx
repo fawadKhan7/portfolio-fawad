@@ -1,6 +1,6 @@
 import { Tooltip } from "@/components/Tooltips";
 import { Typewriter } from "@/components/Typewriter";
-import { frontend, people } from "@/data/HeaderData";
+import { skills } from "@/data/HeaderData";
 import React from "react";
 
 const Skills = () => {
@@ -13,19 +13,8 @@ const Skills = () => {
           { text: "Toolkit", className: "text-blue-600" },
         ]}
       />
-      <div className="flex flex-col md:flex-row md:justify-between">
-        <div className="flex flex-col gap-4 w-full">
-          <div className="text-center text-3xl font-semibold">Frontend</div>
-          <div className="flex flex-row flex-wrap items-center justify-center mb-10 w-full">
-            <Tooltip items={frontend} />
-          </div>
-        </div>
-        <div className="flex flex-col gap-4 w-full">
-          <div className="text-center text-3xl font-semibold">Backend</div>
-          <div className="flex flex-row flex-wrap items-center justify-center mb-10 w-full">
-            <Tooltip items={people} />
-          </div>
-        </div>
+      <div className="flex flex-wrap justify-center items-center md:w-[600px] p-4 mx-auto gap-4 bg-gray-400 bg-opacity-10 rounded-xl">
+        <Tooltip items={skills.sort(() => Math.random() - 0.5)} />
       </div>
     </div>
   );

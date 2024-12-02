@@ -3,6 +3,9 @@ import React from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import LinkedIn from "@/assets/reviews/linkedin.svg";
+import Github from "@/assets/follow/github.svg";
+import { LinkPreview } from "./Link-preview";
 
 export const HeroParallax = ({ products = [] }) => {
   const firstRow = products.slice(0, 5);
@@ -101,6 +104,25 @@ export const Header = () => {
         software and continuously expanding my technical skills while solving
         complex problems.
       </p>
+      <div className="flex items-center gap-4 mt-4">
+        <Image
+          src={LinkedIn}
+          alt="LinkedIn"
+          className="h-10 w-10 object-cover rounded-full cursor-pointer hover:scale-105 transition-all duration-300"
+          onClick={() => {
+            window.location.href =
+              "https://www.linkedin.com/in/fawad-anwar-b9a11a328";
+          }}
+        />
+        <Image
+          src={Github}
+          alt="LinkedIn"
+          className="h-10 w-10 object-cover rounded-full cursor-pointer hover:scale-105 transition-all duration-300"
+          onClick={() => {
+            window.location.href = "https://github.com/fawadKhan7";
+          }}
+        />
+      </div>
     </div>
   );
 };

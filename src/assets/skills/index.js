@@ -10,6 +10,10 @@ import Node from "./nodejs.svg";
 import React from "./react.svg";
 import Sqlite from "./sqlite.svg";
 import Tailwind from "./tailwind.svg";
+import JavaScript from "./js.svg";
+import Bootstrap from "./bootstrap.svg";
+import Redux from "./redux.svg";
+import Zustand from "./zustand.png";
 
 module.exports = {
   AntDesign,
@@ -24,4 +28,8 @@ module.exports = {
   React,
   Sqlite,
   Tailwind,
+  JavaScript,
+  Bootstrap,
+  Redux,
+  Zustand
 };
