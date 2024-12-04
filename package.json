@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@radix-ui/react-hover-card": "^1.1.2",
     "@tabler/icons-react": "^3.23.0",
     "clsx": "^2.1.1",
@@ -16,6 +17,7 @@
     "mini-svg-data-uri": "^1.4.4",
     "next": "15.0.3",
     "qss": "^3.0.0",
+    "radix-ui": "^1.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "tailwind-merge": "^2.5.5"
