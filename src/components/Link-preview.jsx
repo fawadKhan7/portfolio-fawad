@@ -62,6 +62,10 @@ export const LinkPreview = ({
     x.set(offsetFromCenter);
   };
 
+  const handleClick = () => {
+    window.open(visit || url, '_blank', 'noopener,noreferrer');
+  };
+
   return (
     <>
       {isMounted ? (
@@ -86,8 +90,8 @@ export const LinkPreview = ({
       >
         <HoverCardPrimitive.Trigger
           onMouseMove={handleMouseMove}
-          className={cn("text-black dark:text-white", className)}
-          href={visit || url}
+          onClick={handleClick}
+          className={cn("text-black dark:text-white cursor-pointer", className)}
         >
           {children}
         </HoverCardPrimitive.Trigger>
@@ -118,10 +122,10 @@ export const LinkPreview = ({
                   x: translateX,
                 }}
               >
-                <Link
-                  href={visit || url}
-                  className="block p-1 bg-white border-2 border-transparent shadow rounded-xl hover:border-neutral-200 dark:hover:border-neutral-800"
+                <div
+                  className="block p-1 bg-white border-2 border-transparent shadow rounded-xl hover:border-neutral-200 dark:hover:border-neutral-800 cursor-pointer"
                   style={{ fontSize: 0 }}
+                  onClick={handleClick}
                 >
                   <Image
                     src={isStatic ? imageSrc : src}
@@ -133,7 +137,7 @@ export const LinkPreview = ({
                     className="rounded-lg"
                     alt="preview image"
                   />
-                </Link>
+                </div>
               </motion.div>
             )}
           </AnimatePresence>

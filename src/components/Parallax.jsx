@@ -3,14 +3,11 @@ import React from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import LinkedIn from "@/assets/reviews/linkedin.svg";
-import Github from "@/assets/follow/github.svg";
-import { LinkPreview } from "./Link-preview";
+import GitHub from "@/assets/follow/github.svg";
 
-export const HeroParallax = ({ products = [] }) => {
-  const firstRow = products.slice(0, 5);
-  const secondRow = products.slice(5, 10);
-  const thirdRow = products.slice(10, 15);
+export const HeroParallax = ({ products }) => {
+  const firstRow = products.slice(0, 2);
+  const secondRow = products.slice(2, 4);
   const ref = React.useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -40,15 +37,14 @@ export const HeroParallax = ({ products = [] }) => {
     springConfig
   );
   const translateY = useSpring(
-    useTransform(scrollYProgress, [0, 0.2], [-700, 0]),
+    useTransform(scrollYProgress, [0, 0.2], [-700, 500]),
     springConfig
   );
   return (
     <div
       ref={ref}
-      className=" py-40 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+      className="h-full w-full overflow-hidden antialiased relative flex flex-col justify-center [perspective:1000px] [transform-style:preserve-3d]"
     >
-      <Header />
       <motion.div
         style={{
           rotateX,
@@ -56,9 +52,9 @@ export const HeroParallax = ({ products = [] }) => {
           translateY,
           opacity,
         }}
-        className=""
+        className="flex-1 w-full px-4 md:px-8"
       >
-        <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 mb-20">
+        <motion.div className="flex flex-row-reverse space-x-reverse space-x-10 md:space-x-20 mb-10 md:mb-20 justify-center">
           {firstRow.map((product) => (
             <ProductCard
               product={product}
@@ -67,7 +63,7 @@ export const HeroParallax = ({ products = [] }) => {
             />
           ))}
         </motion.div>
-        <motion.div className="flex flex-row  mb-20 space-x-20 ">
+        <motion.div className="flex flex-row space-x-10 md:space-x-20 mb-10 md:mb-20 justify-center">
           {secondRow.map((product) => (
             <ProductCard
               product={product}
@@ -76,52 +72,29 @@ export const HeroParallax = ({ products = [] }) => {
             />
           ))}
         </motion.div>
-        <motion.div className="flex flex-row-reverse space-x-reverse space-x-20">
-          {thirdRow.map((product) => (
-            <ProductCard
-              product={product}
-              translate={translateX}
-              key={product.title}
-            />
-          ))}
-        </motion.div>
       </motion.div>
-    </div>
-  );
-};
-
-export const Header = () => {
-  return (
-    <div className="max-w-7xl relative mx-auto py-20 md:py-40 px-4 w-full  left-0 top-0">
-      <h1 className="text-2xl md:text-7xl font-bold dark:text-white">
-        Fawad Anwar <br /> MERN Stack Developer
-      </h1>
-      <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200">
-        With nearly 2 years of experience as a MERN stack developer, I
-        specialize in building dynamic, user-friendly web applications. My
-        expertise extends to freelancing, where I’ve delivered custom solutions
-        to diverse clients. I’m passionate about developing high-quality
-        software and continuously expanding my technical skills while solving
-        complex problems.
-      </p>
-      <div className="flex items-center gap-4 mt-4">
-        <Image
-          src={LinkedIn}
-          alt="LinkedIn"
-          className="h-10 w-10 object-cover rounded-full cursor-pointer hover:scale-105 transition-all duration-300"
-          onClick={() => {
-            window.location.href =
-              "https://www.linkedin.com/in/fawad-anwar-b9a11a328";
-          }}
-        />
-        <Image
-          src={Github}
-          alt="LinkedIn"
-          className="h-10 w-10 object-cover rounded-full cursor-pointer hover:scale-105 transition-all duration-300"
-          onClick={() => {
-            window.location.href = "https://github.com/fawadKhan7";
-          }}
-        />
+      <div className="flex flex-row justify-center items-center pb-10 gap-6">
+        <Link
+          href="https://www.linkedin.com/in/fawad-anwar-b9a11a328"
+          target="_blank"
+          className="text-blue-600 hover:text-blue-800 transition-colors duration-200 text-sm font-medium flex items-center gap-2"
+        >
+          <span>LinkedIn Profile</span>
+        </Link>
+        <Link
+          href="https://github.com/fawad404"
+          target="_blank"
+          className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 text-sm font-medium flex items-center gap-2"
+        >
+          <Image
+            src={GitHub}
+            alt="GitHub"
+            width={20}
+            height={20}
+            className="dark:invert"
+          />
+          <span>GitHub Profile</span>
+        </Link>
       </div>
     </div>
   );
@@ -137,7 +110,7 @@ export const ProductCard = ({ product, translate }) => {
         y: -20,
       }}
       key={product.title}
-      className="group/product h-[300px] w-[20rem] relative flex-shrink-0"
+      className="group/product h-96 w-[30rem] relative flex-shrink-0"
     >
       <Link
         href={product.link}
@@ -145,9 +118,9 @@ export const ProductCard = ({ product, translate }) => {
       >
         <Image
           src={product.thumbnail}
-          height="300"
-          width="300"
-          className="object-contain object-left-top absolute h-96 w-96 inset-0"
+          height="600"
+          width="600"
+          className="object-cover object-left-top absolute h-full w-full inset-0"
           alt={product.title}
         />
       </Link>

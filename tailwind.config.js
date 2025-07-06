@@ -9,13 +9,79 @@ module.exports = {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/layouts/**/*.{js,ts,jsx,tsx,mdx}",
 
     // Or if using `src` directory:
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   darkMode: "class",
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        background: "var(--background)",
+        foreground: "var(--foreground)",
+      },
+      animation: {
+        aurora: "aurora 60s linear infinite",
+        spotlight: "spotlight 2s ease .75s 1 forwards",
+        "meteor-effect": "meteor-effect 10s linear infinite",
+        "shooting-star": "shooting-star 3s linear infinite",
+        "twinkle": "twinkle 2s ease-in-out infinite alternate",
+      },
+      keyframes: {
+        aurora: {
+          from: {
+            backgroundPosition: "50% 50%, 50% 50%",
+          },
+          to: {
+            backgroundPosition: "350% 50%, 350% 50%",
+          },
+        },
+        spotlight: {
+          "0%": {
+            opacity: 0,
+            transform: "translate(-72%, -62%) scale(0.5)",
+          },
+          "100%": {
+            opacity: 1,
+            transform: "translate(-50%,-40%) scale(1)",
+          },
+        },
+        "meteor-effect": {
+          to: {
+            transform: "translate(calc(100vw - -500px), calc(100vh - -500px))",
+          },
+        },
+        "shooting-star": {
+          "0%": {
+            opacity: 1,
+            transform: "translateY(0) translateX(0) rotate(-45deg) scale(1)",
+          },
+          "70%": {
+            opacity: 1,
+            transform: "translateY(300px) translateX(300px) rotate(-45deg) scale(1)",
+          },
+          "100%": {
+            opacity: 0,
+            transform: "translateY(400px) translateX(400px) rotate(-45deg) scale(0)",
+          },
+        },
+        twinkle: {
+          "0%": {
+            opacity: 0.3,
+            transform: "scale(1)",
+          },
+          "50%": {
+            opacity: 1,
+            transform: "scale(1.2)",
+          },
+          "100%": {
+            opacity: 0.3,
+            transform: "scale(1)",
+          },
+        },
+      },
+    },
   },
   plugins: [
     addVariablesForColors,

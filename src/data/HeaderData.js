@@ -1,71 +1,33 @@
-import PrimeTution from "@/assets/projects/prime.png";
-import Coursehub from "@/assets/projects/coursehub.png";
-import Croom from "@/assets/projects/croom.svg";
-import Softlogic from "@/assets/projects/softlogic.png";
-import Swiftshop from "@/assets/projects/swiftshop.png";
-import Taskmate from "@/assets/projects/taskmate.png";
-import Streamify from "@/assets/projects/Streamify.png";
-import Coach from "@/assets/projects/Coach.png";
-import Labzkit from "@/assets/projects/labzkit.png";
-import Onboarding from "@/assets/projects/Onboarding.png";
-import Fiverr from "@/assets/reviews/fiverr.svg";
-import LinkedIn from "@/assets/reviews/linkedin.svg";
-import UBIT from "@/assets/education/ubit.jpg";
-import DJ from "@/assets/education/DJ.jpg";
 import { LinkPreview } from "@/components/Link-preview";
 import * as Skill from "@/assets/skills/index";
 import Image from "next/image";
 
+// Import restored assets for testimonials and education
+import Fiverr from "@/assets/reviews/fiverr.svg";
+import LinkedIn from "@/assets/reviews/linkedin.svg";
+import UBIT from "@/assets/education/ubit.jpg";
+import DJ from "@/assets/education/DJ.jpg";
+
 export const headerData = [
   {
-    title: "Prime Tuition",
-    thumbnail: PrimeTution,
-    link: "https://primetuition.co.uk/",
-  },
-  {
-    title: "Softlogic",
-    thumbnail: Softlogic,
-    link: "https://softlogicapp.com/",
-  },
-  {
-    title: "Coursehub",
-    thumbnail: Coursehub,
-    link: "#",
-  },
-  {
-    title: "Swiftshop",
-    thumbnail: Swiftshop,
-    link: "#",
-  },
-  {
-    title: "Croom",
-    thumbnail: Croom,
-    link: "#",
-  },
-  {
-    title: "Taskmate",
-    thumbnail: Taskmate,
-    link: "#",
-  },
-  {
-    title: "Onboarding flow",
-    thumbnail: Onboarding,
-    link: "https://www.fiverr.com/fawadkhan366",
+    title: "Labzkit",
+    thumbnail: "/projects/labzkit.png",
+    link: "https://labzkit.com.au",
   },
   {
     title: "Streamify",
-    thumbnail: Streamify,
+    thumbnail: "/projects/Streamify.png",
     link: "https://www.fiverr.com/fawadkhan366",
   },
   {
-    title: "Coach Student review",
-    thumbnail: Coach,
+    title: "Coach Student Review",
+    thumbnail: "/projects/Coach.png",
     link: "https://www.fiverr.com/fawadkhan366",
   },
   {
-    title: "Labzkit",
-    thumbnail: Labzkit,
-    link: "https://labzkit.com.au",
+    title: "Onboarding Flow",
+    thumbnail: "/projects/Onboarding.png",
+    link: "https://www.fiverr.com/fawadkhan366",
   },
 ];
 
@@ -82,68 +44,83 @@ export const skills = [
   },
   {
     id: 3,
+    name: "JavaScript",
+    image: Skill.JavaScript,
+  },
+  {
+    id: 4,
     name: "React.js",
     image: Skill.React,
   },
   {
-    id: 4,
-    name: "Next.js",
-    image: Skill.Next,
-  },
-  {
     id: 5,
-    name: "Framer Motion",
-    image: Skill.Framer,
-  },
-  {
-    id: 6,
-    name: "AntDesign",
-    image: Skill.AntDesign,
-  },
-  {
-    id: 7,
-    name: "Material Ui",
-    image: Skill.Material,
-  },
-  {
-    id: 8,
-    name: "Javascript",
-    image: Skill.JavaScript,
-  },
-  {
-    id: 9,
-    name: "Node.js",
-    image: Skill.Node,
-  },
-  {
-    id: 10,
-    name: "Express.js",
-    image: Skill.Express,
-  },
-  {
-    id: 11,
-    name: "MongoDb",
-    image: Skill.Mongodb,
-  },
-  {
-    id: 12,
-    name: "Sql",
-    image: Skill.Sqlite,
-  },
-  {
-    id: 13,
-    name: "Bootstrap",
-    image: Skill.Bootstrap,
-  },
-  {
-    id: 14,
     name: "Redux",
     image: Skill.Redux,
   },
   {
+    id: 6,
+    name: "Next.js",
+    image: Skill.Next,
+  },
+  {
+    id: 7,
+    name: "Bootstrap",
+    image: Skill.Bootstrap,
+  },
+  {
+    id: 8,
+    name: "Framer Motion",
+    image: Skill.Framer,
+  },
+  {
+    id: 9,
+    name: "AntDesign",
+    image: Skill.AntDesign,
+  },
+  {
+    id: 10,
+    name: "Material Ui",
+    image: Skill.Material,
+  },
+  {
+    id: 11,
+    name: "Node.js",
+    image: Skill.Node,
+  },
+  {
+    id: 12,
+    name: "Express.js",
+    image: Skill.Express,
+  },
+  {
+    id: 13,
+    name: "MongoDb",
+    image: Skill.Mongodb,
+  },
+  {
+    id: 14,
+    name: "Sql",
+    image: Skill.Sqlite,
+  },
+  {
     id: 15,
+    name: "Tailwind CSS",
+    image: Skill.Tailwind,
+  },
+  {
+    id: 16,
     name: "Zustand",
     image: Skill.Zustand,
+  },
+  {
+    id: 17,
+    name: "PostgreSQL",
+    image: Skill.PostgreSQL, // Using Sqlite image for now, you can add a PostgreSQL icon later
+  },
+  {
+    id: 18,
+    name: "NestJS",
+    image: Skill.Nestjs, // Using Node image for now, you can add a NestJS icon later
   },
 ];
 
@@ -158,14 +135,9 @@ export const timelineData = [
             visit={"https://teknoloje.com"}
             url={"https://teknoloje.com/about/"}
           >
-            <a
-              href="https://teknoloje.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[#ff9c00] font-bold"
-            >
+            <span className="text-[#ff9c00] font-bold">
               Teknoloje Solutions
-            </a>
+            </span>
           </LinkPreview>
         </div>
         <div className="font-semibold"> Apr/2023 - Aug/2023</div>
@@ -195,14 +167,9 @@ export const timelineData = [
               "https://www.cyphion.com/static/media/logo-cyphion.21168a8289ff4700e30c.png"
             }
           >
-            <a
-              href="https://www.cyphion.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[#002942] font-bold"
-            >
+            <span className="text-[#002942] font-bold">
               Cyphion
-            </a>
+            </span>
           </LinkPreview>
         </div>
         <div className="font-semibold"> Sept/2023 - Aug/2024</div>
@@ -225,14 +192,9 @@ export const timelineData = [
         <div className="font-semibold text-2xl">Freelancing on Fiverr</div>
         <div className="font-semibold text-xl">
           <LinkPreview url={"https://www.fiverr.com"}>
-            <a
-              href="https://www.fiverr.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[#1dbf73] font-bold"
-            >
+            <span className="text-[#1dbf73] font-bold">
               Fiverr
-            </a>
+            </span>
           </LinkPreview>
         </div>
         <p className="text-neutral-600 dark:text-neutral-400">
@@ -247,30 +209,49 @@ export const timelineData = [
     ),
   },
   {
-    title: "Current Role",
+    title: "MERN Stack Developer",
     content: (
       <div className="flex flex-col gap-1">
         <div className="font-semibold text-2xl">MERN Stack Developer</div>
         <div className="font-semibold text-xl">
           <LinkPreview url={"https://technoholicas.com/"}>
-            <a
-              href="https://technoholicas.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[#0000F0] font-bold"
-            >
+            <span className="text-[#0000F0] font-bold">
               Technoholic Advanced Solutions
-            </a>
+            </span>
           </LinkPreview>
         </div>
-        <div className="font-semibold"> Aug/2024 - Present</div>
+        <div className="font-semibold"> Aug/2024 - Mar/2025</div>
         <p className="text-neutral-600 dark:text-neutral-400">
           As a MERN Stack Developer at Technoholic Advanced Solutions, I
-          continue to expand my expertise in full-stack development. My role
-          involves building robust, scalable applications and optimizing backend
-          services with Node.js and MongoDB. I take pride in creating efficient
-          APIs and delivering solutions that align with both client expectations
+          expanded my expertise in full-stack development. My role involved
+          building robust, scalable applications and optimizing backend
+          services with Node.js and MongoDB. I focused on creating efficient
+          APIs and delivering solutions that aligned with both client expectations
           and technical best practices.
+        </p>
+      </div>
+    ),
+  },
+  {
+    title: "Current Role",
+    content: (
+      <div className="flex flex-col gap-1">
+        <div className="font-semibold text-2xl">Full Stack Developer</div>
+        <div className="font-semibold text-xl">
+          <LinkPreview url={"https://cygnis.co/"}>
+            <span className="text-[#1a73e8] font-bold">
+              Cygnis Media
+            </span>
+          </LinkPreview>
+        </div>
+        <div className="font-semibold"> Mar/2025 - Present</div>
+        <p className="text-neutral-600 dark:text-neutral-400">
+          Currently serving as a Full Stack Developer at Cygnis Media, a leading 
+          custom web development company specializing in intelligent software solutions. 
+          I work on building cutting-edge web applications, mobile apps, and AI-powered 
+          software solutions that drive digital transformation for clients across various 
+          industries. My role focuses on delivering scalable, enterprise-grade solutions 
+          using modern technologies and best practices.
         </p>
       </div>
     ),
@@ -338,7 +319,7 @@ export const educationContent = [
           width={300}
           height={300}
           className="h-full w-full object-cover"
-          alt="linear board demo"
+          alt="DJ College"
         />
       </div>
     ),
@@ -349,19 +330,17 @@ export const cards = [
   {
     id: 1,
     className: "md:col-span-2",
-    thumbnail: PrimeTution,
+    thumbnail: "/projects/prime.png",
     link: "https://primetuition.co.uk/",
     title: "Prime Tution",
     description: (
-      <div class="project-description">
+      <div className="project-description">
         <p>
           As a MERN stack developer, I spearheaded the design and development of
           a robust MERN-based admin panel for managing educational content and
           user interactions. This project involved crafting a user-friendly
-          interface with React, building dynamic data handling
-          features with
-          Node.js and Express, and
-          implementing efficient database management using
+          interface with React, building dynamic data handling features with
+          Node.js and Express, and implementing efficient database management using
           MongoDB.
         </p>
         <h3>Key Features:</h3>
@@ -399,19 +378,18 @@ export const cards = [
   {
     id: 10,
     className: "md:col-span-1",
-    thumbnail: Labzkit,
+    thumbnail: "/projects/labzkit.png",
     link: "https://labzkit.com.au",
     title: "Labzkit",
     description: (
-      <div class="project-description">
+      <div className="project-description">
         <p>
           Labzkit is a comprehensive science product-based
           e-commerce platform, designed to streamline the browsing and
           purchasing process for scientific tools and equipment. This project
           includes a client-facing storefront and an admin panel, offering
           intuitive management and user interaction features. Built with
-          React, Material-UI,
-          Tailwind CSS, and Express.js, it
+          React, Material-UI, Tailwind CSS, and Express.js, it
           provides a seamless and modern user experience.
         </p>
         <h3>Key Features:</h3>
@@ -452,11 +430,11 @@ export const cards = [
   {
     id: 3,
     className: "col-span-1",
-    thumbnail: Coursehub,
+    thumbnail: "/projects/coursehub.png",
     link: "#",
     title: "Coursehub",
     description: (
-      <div class="project-description">
+      <div className="project-description">
         <p>
           Coursehub is a dynamic course-providing platform
           designed to connect learners with a wide range of educational content.
@@ -501,17 +479,15 @@ export const cards = [
   {
     id: 2,
     className: "col-span-2",
-    thumbnail: Softlogic,
+    thumbnail: "/projects/softlogic.png",
     link: "https://softlogicapp.com/",
     title: "Softlogic",
     description: (
-      <div class="project-description">
+      <div className="project-description">
         <p>
           Softlogic is a comprehensive service provider
           application that offers a range of professional services, including
-          web development,
-          mobile app development,
-          graphic designing, and more. As a
+          web development, mobile app development, graphic designing, and more. As a
           MERN stack developer, I contributed to the design and
           development of this application, ensuring a seamless experience for
           both service providers and clients.
@@ -559,11 +535,11 @@ export const cards = [
   {
     id: 5,
     className: "col-span-2",
-    thumbnail: Croom,
+    thumbnail: "/projects/croom.svg",
     link: "#",
     title: "Croom",
     description: (
-      <div class="project-description">
+      <div className="project-description">
         <p>
           Croom is a real-time chat application designed to
           enable seamless communication between users. This platform provides
@@ -624,11 +600,11 @@ export const cards = [
   {
     id: 6,
     className: "col-span-1",
-    thumbnail: Taskmate,
+    thumbnail: "/projects/taskmate.png",
     link: "#",
     title: "Taskmate",
     description: (
-      <div class="project-description">
+      <div className="project-description">
         <p>
           Taskmate is an advanced to-do application that offers
           robust task management capabilities with role-based features,
@@ -679,11 +655,11 @@ export const cards = [
   {
     id: 9,
     className: "col-span-1",
-    thumbnail: Coach,
+    thumbnail: "/projects/Coach.png",
     link: "https://www.fiverr.com/fawadkhan366",
     title: "Coach-Connect",
     description: (
-      <div class="project-description">
+      <div className="project-description">
         <p>
           Coach-Connect is a comprehensive
           MERN stack application designed to facilitate
@@ -732,11 +708,11 @@ export const cards = [
   {
     id: 7,
     className: "md:col-span-1",
-    thumbnail: Onboarding,
+    thumbnail: "/projects/Onboarding.png",
     link: "https://www.fiverr.com/fawadkhan366",
     title: "Onboarding Flow",
     description: (
-      <div class="project-description">
+      <div className="project-description">
         <p>
           Onboarding-Flow is a dynamic
           MERN stack application designed to provide a
@@ -793,11 +769,11 @@ export const cards = [
   {
     id: 8,
     className: "col-span-1",
-    thumbnail: Streamify,
+    thumbnail: "/projects/Streamify.png",
     link: "https://www.fiverr.com/fawadkhan366",
     title: "Streamify",
     description: (
-      <div class="project-description">
+      <div className="project-description">
         <p>
           Streamify is a multi-role streaming platform that
           provides real-time controls for stream hosts, allowing them to manage
@@ -824,7 +800,7 @@ export const cards = [
           <li>
             Push Notifications and Email Alerts: Notifications
             are sent to users for live stream events and updates, keeping them
-            informed even when they’re not actively watching the stream.
+            informed even when they're not actively watching the stream.
           </li>
           <li>
             Secure Authentication: Utilizes
@@ -864,15 +840,14 @@ export const cards = [
       </div>
     ),
   },
-
   {
     id: 4,
     className: "md:col-span-1",
-    thumbnail: Swiftshop,
+    thumbnail: "/projects/swiftshop.png",
     link: "#",
     title: "Swiftshop",
     description: (
-      <div class="project-description">
+      <div className="project-description">
         <p>
           Swiftshop is a robust e-commerce platform built with
           the MERN stack, offering both client and admin panels
@@ -934,6 +909,119 @@ export const cards = [
           real-time applications using the MERN stack, while
           integrating payment gateways and building intuitive, responsive user
           interfaces.
+        </p>
+      </div>
+    ),
+  },
+  {
+    id: 11,
+    className: "col-span-2",
+    thumbnail: "/projects/spaderent.webp",
+    link: "https://spaderent.com/",
+    title: "Spaderent",
+    description: (
+      <div className="project-description">
+        <p>
+          Spaderent is a comprehensive property management software solution 
+          offering streamlined property oversight, tenant management, and 
+          automated operations. The platform provides property managers with 
+          advanced tools for rent collection, maintenance tracking, and tenant 
+          communication, all integrated into a single, user-friendly interface.
+        </p>
+        <h3>Key Features:</h3>
+        <ul>
+          <li>
+            Property Oversight: Complete property management 
+            dashboard with real-time monitoring of rental properties, 
+            maintenance requests, and tenant activities.
+          </li>
+          <li>
+            Automated Rent Collection: Streamlined payment 
+            processing with integrated payment gateways, automated 
+            reminders, and detailed financial reporting.
+          </li>
+          <li>
+            Tenant Management: Comprehensive tenant profiles, 
+            lease management, and communication tools for efficient 
+            property-tenant interactions.
+          </li>
+          <li>
+            Maintenance Board: Organized maintenance request 
+            system with priority tracking, vendor management, and 
+            completion status updates.
+          </li>
+          <li>
+            Responsive Frontend: Built with React and modern 
+            UI frameworks, providing an intuitive interface that 
+            works seamlessly across desktop and mobile devices.
+          </li>
+          <li>
+            Scalable Backend: Powered by Node.js and MongoDB, 
+            ensuring efficient data handling and secure API 
+            integrations for payment processing.
+          </li>
+        </ul>
+        <p>
+          Spaderent transforms property management by providing an all-in-one 
+          solution that simplifies operations, improves tenant satisfaction, 
+          and maximizes property investment returns through efficient management tools.
+        </p>
+      </div>
+    ),
+  },
+  {
+    id: 12,
+    className: "col-span-1",
+    thumbnail: "/projects/DigitalTenant.png",
+    link: "https://digitaltenant.com/",
+    title: "Digital Tenant",
+    description: (
+      <div className="project-description">
+        <p>
+          Digital Tenant is an advanced tenant-focused property management 
+          platform providing automated rent collection, maintenance requests, 
+          and tenant communication features. The platform empowers tenants 
+          with self-service capabilities while giving property managers 
+          comprehensive oversight and control.
+        </p>
+        <h3>Key Features:</h3>
+        <ul>
+          <li>
+            Automated Rent Collection: Seamless online payment 
+            system with automated reminders, payment tracking, and 
+            receipt generation for tenants.
+          </li>
+          <li>
+            Maintenance Request System: Easy-to-use interface 
+            for tenants to submit maintenance requests with photo 
+            uploads, priority settings, and real-time status updates.
+          </li>
+          <li>
+            Tenant Communication Hub: Integrated messaging system 
+            for direct communication between tenants and property 
+            managers, with notification capabilities.
+          </li>
+          <li>
+            Mobile-Responsive Design: Optimized for mobile devices 
+            with React.js, ensuring tenants can access all features 
+            from their smartphones or tablets.
+          </li>
+          <li>
+            Real-Time Notifications: Push notifications and email 
+            alerts for payment reminders, maintenance updates, and 
+            important announcements.
+          </li>
+          <li>
+            Secure Backend Architecture: Built with Node.js and 
+            MongoDB, featuring secure authentication, data encryption, 
+            and reliable API integrations.
+          </li>
+        </ul>
+        <p>
+          Digital Tenant revolutionizes the rental experience by putting 
+          powerful tools in tenants' hands while providing property managers 
+          with comprehensive insights and automated workflows for efficient 
+          property operations.
         </p>
       </div>
     ),
