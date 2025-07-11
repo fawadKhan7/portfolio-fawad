@@ -126,10 +126,10 @@ export const skills = [
 
 export const timelineData = [
   {
-    title: "Internship",
+    title: "First Steps",
     content: (
-      <div className="flex flex-col gap-1">
-        <div className="font-semibold text-2xl">Backend Developer</div>
+      <div className="flex flex-col gap-3">
+        <div className="font-semibold text-2xl text-white">Backend Developer</div>
         <div className="font-semibold text-xl">
           <LinkPreview
             visit={"https://teknoloje.com"}
@@ -140,24 +140,25 @@ export const timelineData = [
             </span>
           </LinkPreview>
         </div>
-        <div className="font-semibold"> Apr/2023 - Aug/2023</div>
-        <p className="text-neutral-600 dark:text-neutral-400">
-          My journey into software development commenced with an internship at
-          Teknoloje Solutions. During this period, I acquired a strong
-          foundation in backend technologies alongside essential web development
-          skills such as HTML, CSS, and JavaScript. This hands-on experience not
-          only deepened my technical knowledge but also ignited my passion for
-          crafting impactful web applications, laying a solid groundwork for my
-          career ahead.
+        <div className="font-semibold text-zinc-400 text-sm"> Apr/2023 - Aug/2023</div>
+        <p className="text-zinc-400 leading-relaxed text-sm">
+          Established technical foundation through intensive backend development experience. 
+          Mastered core technologies including Node.js, database management, and API development. 
+          This foundational period shaped my commitment to delivering robust, scalable solutions that exceed client expectations.
         </p>
+        <div className="flex flex-wrap gap-2 mt-2">
+          <span className="px-3 py-1 bg-zinc-800 rounded-full text-xs text-zinc-300">Node.js</span>
+          <span className="px-3 py-1 bg-zinc-800 rounded-full text-xs text-zinc-300">JavaScript</span>
+          <span className="px-3 py-1 bg-zinc-800 rounded-full text-xs text-zinc-300">Database Design</span>
+        </div>
       </div>
     ),
   },
   {
-    title: "Secured My First Job",
+    title: "Stepping Up",
     content: (
-      <div className="flex flex-col gap-1">
-        <div className="font-semibold text-2xl">
+      <div className="flex flex-col gap-3">
+        <div className="font-semibold text-2xl text-white">
           Junior MERN Stack Developer
         </div>
         <div className="font-semibold text-xl">
@@ -167,52 +168,58 @@ export const timelineData = [
               "https://www.cyphion.com/static/media/logo-cyphion.21168a8289ff4700e30c.png"
             }
           >
-            <span className="text-[#002942] font-bold">
+            <span className="text-[#1a73e8] font-bold">
               Cyphion
             </span>
           </LinkPreview>
         </div>
-        <div className="font-semibold"> Sept/2023 - Aug/2024</div>
-        <p className="text-neutral-600 dark:text-neutral-400">
-          Following my internship, I embarked on my professional career as a
-          Junior MERN Stack Developer at Cyphion. This role provided me with
-          invaluable full-stack development experience, including the
-          opportunity to launch my first personal project—a portfolio website. I
-          honed my skills in project management, deployment strategies, and
-          front-end development, significantly contributing to my technical and
-          professional growth.
+        <div className="font-semibold text-zinc-400 text-sm"> Sept/2023 - Aug/2024</div>
+        <p className="text-zinc-400 leading-relaxed text-sm">
+          Advanced to full-stack development, delivering comprehensive web solutions using the MERN stack. 
+          Successfully launched multiple client projects from concept to deployment, establishing expertise in 
+          modern development workflows, database architecture, and responsive design principles.
         </p>
+        <div className="flex flex-wrap gap-2 mt-2">
+          <span className="px-3 py-1 bg-zinc-800 rounded-full text-xs text-zinc-300">React.js</span>
+          <span className="px-3 py-1 bg-zinc-800 rounded-full text-xs text-zinc-300">MongoDB</span>
+          <span className="px-3 py-1 bg-zinc-800 rounded-full text-xs text-zinc-300">Express.js</span>
+          <span className="px-3 py-1 bg-zinc-800 rounded-full text-xs text-zinc-300">Project Management</span>
+        </div>
       </div>
     ),
   },
   {
-    title: "Freelancing",
+    title: "Going Freelance",
     content: (
-      <div className="flex flex-col gap-1">
-        <div className="font-semibold text-2xl">Freelancing on Fiverr</div>
+      <div className="flex flex-col gap-3">
+        <div className="font-semibold text-2xl text-white">Premium Freelance Services</div>
         <div className="font-semibold text-xl">
           <LinkPreview url={"https://www.fiverr.com"}>
             <span className="text-[#1dbf73] font-bold">
-              Fiverr
+              Fiverr Platform
             </span>
           </LinkPreview>
         </div>
-        <p className="text-neutral-600 dark:text-neutral-400">
-          Transitioning into freelancing, I collaborated with clients globally
-          on Fiverr, focusing on designing and developing dynamic, responsive,
-          and scalable web applications using React.js. This experience enhanced
-          my technical expertise while refining my client communication, project
-          management, and delivery skills—key attributes in achieving successful
-          project outcomes.
+        <div className="font-semibold text-zinc-400 text-sm">2023 - Present</div>
+        <p className="text-zinc-400 leading-relaxed text-sm">
+          Established premium freelance services, delivering high-quality web applications to international clients. 
+          Specialized in creating custom React.js solutions with exceptional attention to detail, maintaining 
+          perfect client satisfaction ratings and building long-term partnerships through exceptional service delivery.
         </p>
+        <div className="flex flex-wrap gap-2 mt-2">
+          <span className="px-3 py-1 bg-zinc-800 rounded-full text-xs text-zinc-300">Client Management</span>
+          <span className="px-3 py-1 bg-zinc-800 rounded-full text-xs text-zinc-300">Custom Solutions</span>
+          <span className="px-3 py-1 bg-zinc-800 rounded-full text-xs text-zinc-300">Quality Assurance</span>
+          <span className="px-3 py-1 bg-zinc-800 rounded-full text-xs text-zinc-300">Global Delivery</span>
+        </div>
       </div>
     ),
   },
   {
-    title: "MERN Stack Developer",
+    title: "Building Experience",
     content: (
-      <div className="flex flex-col gap-1">
-        <div className="font-semibold text-2xl">MERN Stack Developer</div>
+      <div className="flex flex-col gap-3">
+        <div className="font-semibold text-2xl text-white">MERN Stack Developer</div>
         <div className="font-semibold text-xl">
           <LinkPreview url={"https://technoholicas.com/"}>
             <span className="text-[#0000F0] font-bold">
@@ -220,23 +227,26 @@ export const timelineData = [
             </span>
           </LinkPreview>
         </div>
-        <div className="font-semibold"> Aug/2024 - Mar/2025</div>
-        <p className="text-neutral-600 dark:text-neutral-400">
-          As a MERN Stack Developer at Technoholic Advanced Solutions, I
-          expanded my expertise in full-stack development. My role involved
-          building robust, scalable applications and optimizing backend
-          services with Node.js and MongoDB. I focused on creating efficient
-          APIs and delivering solutions that aligned with both client expectations
-          and technical best practices.
-        </p>
+        <div className="font-semibold text-zinc-400 text-sm"> Aug/2024 - Mar/2025</div>
+                 <p className="text-zinc-400 leading-relaxed text-sm">
+           Expanded my expertise in full-stack development, working on scalable applications and backend services. 
+           Focused on building efficient APIs, optimizing performance, and implementing best practices in code quality 
+           and deployment strategies while collaborating with experienced developers.
+         </p>
+         <div className="flex flex-wrap gap-2 mt-2">
+           <span className="px-3 py-1 bg-zinc-800 rounded-full text-xs text-zinc-300">Full-Stack Development</span>
+           <span className="px-3 py-1 bg-zinc-800 rounded-full text-xs text-zinc-300">API Development</span>
+           <span className="px-3 py-1 bg-zinc-800 rounded-full text-xs text-zinc-300">Performance Optimization</span>
+           <span className="px-3 py-1 bg-zinc-800 rounded-full text-xs text-zinc-300">Team Collaboration</span>
+         </div>
       </div>
     ),
   },
   {
     title: "Current Role",
     content: (
-      <div className="flex flex-col gap-1">
-        <div className="font-semibold text-2xl">Full Stack Developer</div>
+      <div className="flex flex-col gap-3">
+        <div className="font-semibold text-2xl text-white">Full Stack Developer</div>
         <div className="font-semibold text-xl">
           <LinkPreview url={"https://cygnis.co/"}>
             <span className="text-[#1a73e8] font-bold">
@@ -244,15 +254,18 @@ export const timelineData = [
             </span>
           </LinkPreview>
         </div>
-        <div className="font-semibold"> Mar/2025 - Present</div>
-        <p className="text-neutral-600 dark:text-neutral-400">
-          Currently serving as a Full Stack Developer at Cygnis Media, a leading 
-          custom web development company specializing in intelligent software solutions. 
-          I work on building cutting-edge web applications, mobile apps, and AI-powered 
-          software solutions that drive digital transformation for clients across various 
-          industries. My role focuses on delivering scalable, enterprise-grade solutions 
-          using modern technologies and best practices.
-        </p>
+        <div className="font-semibold text-zinc-400 text-sm"> Mar/2025 - Present</div>
+                 <p className="text-zinc-400 leading-relaxed text-sm">
+           Working as a Full Stack Developer at Cygnis Media, contributing to intelligent software solutions 
+           and web development projects. Building modern web applications, working with AI integration, 
+           and delivering quality solutions for clients across various industries.
+         </p>
+         <div className="flex flex-wrap gap-2 mt-2">
+           <span className="px-3 py-1 bg-zinc-800 rounded-full text-xs text-zinc-300">Modern Web Apps</span>
+           <span className="px-3 py-1 bg-zinc-800 rounded-full text-xs text-zinc-300">AI Integration</span>
+           <span className="px-3 py-1 bg-zinc-800 rounded-full text-xs text-zinc-300">Client Solutions</span>
+           <span className="px-3 py-1 bg-zinc-800 rounded-full text-xs text-zinc-300">Quality Development</span>
+         </div>
       </div>
     ),
   },
@@ -916,7 +929,7 @@ export const cards = [
   {
     id: 11,
     className: "col-span-2",
-    thumbnail: "/projects/spaderent.webp",
+    thumbnail: "/projects/spaderent.png",
     link: "https://spaderent.com/",
     title: "Spaderent",
     description: (

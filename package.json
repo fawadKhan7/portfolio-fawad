@@ -6,11 +6,14 @@
     "dev": "next dev -p 8080",
     "build": "next build",
     "start": "next start -p 8080",
-    "lint": "next lint"
+    "lint": "next lint",
+    "vercel-build": "npm install --legacy-peer-deps && vercel build"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "@radix-ui/react-hover-card": "^1.1.2",
+    "@react-three/drei": "^10.5.0",
+    "@react-three/fiber": "^9.2.0",
     "@tabler/icons-react": "^3.23.0",
     "clsx": "^2.1.1",
     "framer-motion": "^11.12.0",
@@ -21,7 +24,8 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "simplex-noise": "^4.0.3",
-    "tailwind-merge": "^2.5.5"
+    "tailwind-merge": "^2.5.5",
+    "three": "^0.178.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.20",

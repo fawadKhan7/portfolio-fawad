@@ -2,12 +2,12 @@
 import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
 import { cn } from "../../lib/utils";
-import { Label } from "@/components/FormFields/Label";
+import ScrollReveal from "@/components/ScrollReveal";
 import { InputField } from "@/components/FormFields/InputField";
 import { TextArea } from "@/components/FormFields/TextArea";
 import { IconBrandGithub, IconBrandLinkedin, IconMail } from "@tabler/icons-react";
-import { Spotlight } from "@/components/Spotlight";
 import { Typewriter } from "@/components/Typewriter";
+import Globe from "@/components/Globe";
 
 const Reach = () => {
   const [formData, setFormData] = useState({
@@ -56,133 +56,139 @@ const Reach = () => {
   };
 
   return (
-    <div className="min-h-[70vh] py-12 relative overflow-hidden">
-      <Spotlight
-        className="-top-40 left-0 md:left-60 md:-top-20"
-        fill="#3b82f6"
-      />
-      
-      <div className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-12 relative z-10">
-        <div className="text-center mb-10">
-          <Typewriter
-            words={[
-              { text: "Get", className: "text-gray-800" },
-              { text: "In", className: "text-blue-600" },
-              { text: "Touch", className: "text-purple-600" },
-            ]}
-            className="text-center mb-6"
-          />
+    <div className="min-h-screen py-16 relative">
+      <ScrollReveal>
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+        <div className="text-center mb-16">
+          <h1 className="text-3xl md:text-5xl font-bold text-center text-white mb-6">
+            Get In Touch
+          </h1>
           
-          <p className="text-gray-600 text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
+          <p className="text-zinc-400 text-lg max-w-3xl mx-auto leading-relaxed">
             Ready to bring your ideas to life? Let's discuss your project and create something amazing together.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {/* Contact Form */}
-          <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-gray-200 shadow-lg">
-            <h3 className="text-xl font-bold text-gray-800 mb-4">Send Me a Message</h3>
-            
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <div>
-                <Label htmlFor="name">Name</Label>
-                <InputField
-                  id="name"
-                  name="name"
-                  type="text"
-                  placeholder="Your full name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-
-              <div>
-                <Label htmlFor="email">Email</Label>
-                <InputField
-                  id="email"
-                  name="email"
-                  type="email"
-                  placeholder="your.email@example.com"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-
-              <div>
-                <Label htmlFor="message">Message</Label>
-                <TextArea
-                  id="message"
-                  name="message"
-                  placeholder="Tell me about your project..."
-                  rows={6}
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-medium py-3 px-6 rounded-lg transition-all duration-200 hover:scale-105 hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
-              >
-                {isSubmitting ? 'Sending...' : 'Send Message'}
-              </button>
-
-              {submitStatus === 'success' && (
-                <p className="text-green-600 text-center">Message sent successfully! I'll get back to you soon.</p>
-              )}
-              {submitStatus === 'error' && (
-                <p className="text-red-600 text-center">Failed to send message. Please try again.</p>
-              )}
-            </form>
-          </div>
-
-          {/* Contact Information */}
-          <div className="space-y-6">
-            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-gray-200 shadow-lg">
-              <h3 className="text-xl font-bold text-gray-800 mb-4">Let's Connect</h3>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          {/* Left Side - Form and Connect sections */}
+          <div className="space-y-8">
+            {/* Contact Form */}
+            <div className="bg-zinc-900/80 backdrop-blur-sm rounded-2xl p-8 border border-zinc-700/50 shadow-2xl">
+              <h3 className="text-2xl font-bold text-white mb-6">Send Me a Message</h3>
               
-              <div className="space-y-3">
-                <div className="flex items-center gap-3">
-                  <div className="p-2.5 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg">
-                    <IconMail className="h-5 w-5 text-white" />
-                  </div>
-                  <div>
-                    <p className="text-gray-600 text-sm">Email</p>
-                    <p className="text-gray-800 font-medium text-sm">fawadanwar.dev@gmail.com</p>
-                  </div>
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div>
+                  <InputField
+                    id="name"
+                    name="name"
+                    type="text"
+                    placeholder="Your name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
+
+                <div>
+                  <InputField
+                    id="email"
+                    name="email"
+                    type="email"
+                    placeholder="Your email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
+
+                <div>
+                  <TextArea
+                    id="message"
+                    name="message"
+                    placeholder="Your message"
+                    rows={6}
+                    value={formData.message}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="w-full bg-white text-black font-semibold py-4 px-6 rounded-lg transition-all duration-300 hover:bg-zinc-200 hover:scale-[1.02] hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
+                </button>
+
+                {submitStatus === 'success' && (
+                  <p className="text-green-400 text-center font-medium">Message sent successfully! I'll get back to you soon.</p>
+                )}
+                {submitStatus === 'error' && (
+                  <p className="text-red-400 text-center font-medium">Failed to send message. Please try again.</p>
+                )}
+              </form>
+            </div>
+
+            {/* Contact Info and Social */}
+            <div className="grid grid-cols-1 gap-6">
+              {/* Follow Me Section - Now includes all contact methods */}
+              <div className="bg-zinc-900/70 backdrop-blur-sm rounded-2xl p-6 border border-zinc-700/40 shadow-2xl">
+                <h3 className="text-lg font-bold text-white mb-4">Let's Connect</h3>
+                
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <a
+                    href="mailto:fawadanwar.dev@gmail.com"
+                    className="flex items-center gap-3 p-3 bg-zinc-800/60 hover:bg-zinc-700/60 rounded-lg transition-all duration-300 hover:scale-[1.02] border border-zinc-600/30 flex-1"
+                  >
+                    <IconMail className="h-5 w-5 text-blue-400" />
+                    <span className="text-white text-sm font-medium">Mail Me</span>
+                  </a>
+                  <a
+                    href="https://github.com/fawadKhan7"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 p-3 bg-zinc-800/60 hover:bg-zinc-700/60 rounded-lg transition-all duration-300 hover:scale-[1.02] border border-zinc-600/30 flex-1"
+                  >
+                    <IconBrandGithub className="h-5 w-5 text-white" />
+                    <span className="text-white text-sm font-medium">GitHub</span>
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/fawad-anwar-b9a11a328"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 p-3 bg-zinc-800/60 hover:bg-zinc-700/60 rounded-lg transition-all duration-300 hover:scale-[1.02] border border-zinc-600/30 flex-1"
+                  >
+                    <IconBrandLinkedin className="h-5 w-5 text-blue-400" />
+                    <span className="text-white text-sm font-medium">LinkedIn</span>
+                  </a>
                 </div>
               </div>
             </div>
+          </div>
 
-            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-gray-200 shadow-lg">
-              <h3 className="text-lg font-bold text-gray-800 mb-4">Follow Me</h3>
+          {/* Right Side - Globe */}
+          <div className="flex flex-col items-center justify-center">
+            <div className="w-full max-w-lg mx-auto">
+              <div className="aspect-square w-full">
+                <Globe className="w-full h-full" />
+              </div>
               
-              <div className="flex gap-3">
-                <a
-                  href="https://github.com/fawadKhan7"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-2.5 bg-gray-800 hover:bg-gray-700 rounded-lg transition-all duration-200 hover:scale-105"
-                >
-                  <IconBrandGithub className="h-5 w-5 text-white" />
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/fawad-anwar-b9a11a328"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-2.5 bg-blue-600 hover:bg-blue-500 rounded-lg transition-all duration-200 hover:scale-105"
-                >
-                  <IconBrandLinkedin className="h-5 w-5 text-white" />
-                </a>
+              {/* Globe Description */}
+              <div className="mt-8 text-center">
+                <h3 className="text-xl font-bold text-white mb-3">
+                  Building Worldwide Connections
+                </h3>
+                <p className="text-zinc-400 text-sm leading-relaxed max-w-sm mx-auto">
+                  Creating digital solutions that span continents. Every project connects 
+                  innovation with opportunity, bringing ideas to life globally.
+                </p>
               </div>
             </div>
           </div>
         </div>
-      </div>
+        </div>
+      </ScrollReveal>
     </div>
   );
 };

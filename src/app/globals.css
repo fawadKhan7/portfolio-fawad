@@ -3,13 +3,13 @@
 @tailwind utilities;
 
 body {
-  color: rgb(var(--foreground));
+  color: #F3F4F6;
   background: linear-gradient(
       to bottom,
-      transparent,
-      rgb(var(--background))
+      #000000,
+      #0A0A0A
     )
-    rgb(var(--background));
+    #000000;
 }
 
 @layer utilities {
@@ -97,7 +97,7 @@ body {
 }
 
 .dot-pattern {
-  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.15) 1px, transparent 1px);
+  background-image: radial-gradient(circle, rgba(192, 192, 192, 0.1) 1px, transparent 1px);
   background-size: 20px 20px;
 }
 
@@ -109,7 +109,7 @@ body {
 /* Custom Scrollbar Styles */
 .custom-scrollbar {
   scrollbar-width: thin;
-  scrollbar-color: #3b82f6 #f1f5f9;
+  scrollbar-color: #C0C0C0 #0D1117;
 }
 
 .custom-scrollbar::-webkit-scrollbar {
@@ -117,23 +117,23 @@ body {
 }
 
 .custom-scrollbar::-webkit-scrollbar-track {
-  background: #f1f5f9;
+  background: #0D1117;
   border-radius: 10px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  background: linear-gradient(135deg, #C0C0C0, #9CA3AF);
   border-radius: 10px;
   transition: all 0.3s ease;
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  background: linear-gradient(135deg, #E5E7EB, #C0C0C0);
   transform: scaleY(1.1);
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb:active {
-  background: linear-gradient(135deg, #1d4ed8, #6d28d9);
+  background: linear-gradient(135deg, #F3F4F6, #D1D5DB);
 }
 
 /* Smooth scrolling behavior */
@@ -144,7 +144,7 @@ body {
 /* Modal Description Styles */
 .modal-description-content {
   scrollbar-width: thin;
-  scrollbar-color: #60a5fa #374151;
+  scrollbar-color: #C0C0C0 #0D1117;
 }
 
 .modal-description-content::-webkit-scrollbar {
@@ -152,21 +152,21 @@ body {
 }
 
 .modal-description-content::-webkit-scrollbar-track {
-  background: rgba(55, 65, 81, 0.5);
+  background: rgba(13, 17, 23, 0.8);
   border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(192, 192, 192, 0.2);
 }
 
 .modal-description-content::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, #60a5fa, #a855f7);
+  background: linear-gradient(135deg, #C0C0C0, #9CA3AF);
   border-radius: 10px;
-  border: 2px solid rgba(55, 65, 81, 0.3);
+  border: 2px solid rgba(13, 17, 23, 0.3);
   transition: all 0.3s ease;
 }
 
 .modal-description-content::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
-  border: 2px solid rgba(255, 255, 255, 0.1);
+  background: linear-gradient(135deg, #E5E7EB, #C0C0C0);
+  border: 2px solid rgba(192, 192, 192, 0.2);
   transform: scaleY(1.1);
 }
 
@@ -175,19 +175,19 @@ body {
 }
 
 .prose-invert h3 {
-  color: #ffffff;
+  color: #C0C0C0;
   font-size: 1.3rem;
   font-weight: 600;
   margin-top: 1.5rem;
   margin-bottom: 1rem;
-  background: linear-gradient(135deg, #60a5fa, #a855f7);
+  background: linear-gradient(135deg, #C0C0C0, #E5E7EB);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .prose-invert p {
-  color: #e5e7eb;
+  color: #d1d5db;
   line-height: 1.7;
   margin-bottom: 1.2rem;
   font-size: 1rem;
@@ -211,24 +211,24 @@ body {
   content: "●";
   position: absolute;
   left: 0;
-  color: #60a5fa;
+  color: #C0C0C0;
   font-weight: bold;
 }
 
 .project-description h3 {
-  color: #ffffff !important;
+  color: #C0C0C0 !important;
   font-size: 1.3rem !important;
   font-weight: 600 !important;
   margin-top: 1.5rem !important;
   margin-bottom: 1rem !important;
-  background: linear-gradient(135deg, #60a5fa, #a855f7) !important;
+  background: linear-gradient(135deg, #C0C0C0, #E5E7EB) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
   background-clip: text !important;
 }
 
 .project-description p {
-  color: #e5e7eb !important;
+  color: #d1d5db !important;
   margin-bottom: 1.2rem !important;
   line-height: 1.7 !important;
   font-size: 1rem !important;
@@ -246,7 +246,7 @@ body {
   content: "●" !important;
   position: absolute !important;
   left: 0 !important;
-  color: #60a5fa !important;
+  color: #C0C0C0 !important;
   font-weight: bold !important;
 }
 

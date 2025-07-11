@@ -9,13 +9,13 @@ import Projects from "@/layouts/Projects";
 import Reach from "@/layouts/Reach";
 import Reviews from "@/layouts/Reviews";
 import Skills from "@/layouts/Skills";
+
 import { useRef } from "react";
 import {
   IconHome,
   IconUser,
   IconCode,
   IconBriefcase,
-  IconSchool,
   IconFolder,
   IconStar,
   IconMail,
@@ -25,7 +25,6 @@ export default function Home() {
   const aboutRef = useRef(null);
   const skillsRef = useRef(null);
   const experienceRef = useRef(null);
-  const educationRef = useRef(null);
   const reviewsRef = useRef(null);
   const reachRef = useRef(null);
   const projectsRef = useRef(null);
@@ -51,19 +50,19 @@ export default function Home() {
   };
 
   return (
-    <div className="relative bg-gradient-to-br from-blue-50 via-white to-purple-50 min-h-screen overflow-x-hidden">
+    <div className="relative bg-black min-h-screen overflow-x-hidden">
       {/* Background Effects */}
       <Sparkles 
         id="sparkles-bg"
         background="transparent"
-        minSize={0.4}
-        maxSize={1.0}
-        particleDensity={60}
-        className="fixed inset-0 pointer-events-none z-0 opacity-30"
+        minSize={0.1}
+        maxSize={0.3}
+        particleDensity={20}
+        className="fixed inset-0 pointer-events-none z-0 opacity-5"
       />
       
-      {/* Subtle gradient overlay */}
-      <div className="fixed inset-0 bg-gradient-to-br from-blue-100/20 via-transparent to-purple-100/20 pointer-events-none z-0" />
+      {/* Subtle dark overlay */}
+      <div className="fixed inset-0 bg-gradient-to-br from-zinc-900/10 via-transparent to-black/20 pointer-events-none z-0" />
       
       {/* Sticky Navigation */}
       <StickyNavbar 
@@ -75,38 +74,37 @@ export default function Home() {
       
       <div className="relative z-10 w-full overflow-x-hidden">
         {/* Hero Section */}
-        <div ref={headerRef} className="relative w-full overflow-hidden">
+        <div ref={headerRef} className="relative w-full overflow-hidden bg-black">
           <Header onViewWork={() => handleScrollTo(projectsRef)} />
         </div>
 
         {/* About Section */}
-        <div ref={aboutRef} className="relative w-full overflow-hidden bg-gradient-to-br from-gray-50 to-blue-50">
-          <Meteors number={12} />
+        <div ref={aboutRef} className="relative w-full overflow-hidden bg-zinc-950">
           <About />
         </div>
 
         {/* Skills Section */}
-        <div ref={skillsRef} className="relative w-full overflow-hidden bg-white">
+        <div ref={skillsRef} className="relative w-full overflow-hidden bg-black">
           <Skills />
         </div>
 
         {/* Experience Section */}
-        <div ref={experienceRef} className="relative w-full overflow-hidden bg-gradient-to-br from-purple-50 to-pink-50">
+        <div ref={experienceRef} className="relative w-full overflow-hidden bg-zinc-950">
           <Experience />
         </div>
 
         {/* Projects Section */}
-        <div ref={projectsRef} data-section="projects" className="relative w-full overflow-hidden bg-gradient-to-br from-blue-50 to-indigo-50 z-20">
+        <div ref={projectsRef} data-section="projects" className="relative w-full overflow-hidden bg-black z-20">
           <Projects />
         </div>
 
         {/* Reviews Section */}
-        <div ref={reviewsRef} className="relative w-full overflow-hidden bg-gradient-to-br from-green-50 to-teal-50">
+        <div ref={reviewsRef} className="relative w-full overflow-hidden bg-zinc-950">
           <Reviews />
         </div>
 
         {/* Contact Section */}
-        <div ref={reachRef} className="relative w-full overflow-hidden bg-gradient-to-br from-orange-50 to-yellow-50">
+        <div ref={reachRef} className="relative w-full overflow-hidden bg-black">
           <Reach />
         </div>
       </div>
