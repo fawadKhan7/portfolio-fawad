@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start -p 8080",
     "lint": "next lint",
-    "vercel-build": "npm install --legacy-peer-deps && vercel build"
+    "vercel-build": "next build"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
